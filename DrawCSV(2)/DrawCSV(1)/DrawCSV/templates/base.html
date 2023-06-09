@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+
+<script src="/static/jquery-3.6.1.min.js"></script>
+<script src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/static/bootstrap-3.4.1-dist/css/bootstrap.min.css"  crossorigin="anonymous">
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css" crossorigin="anonymous">
+
+
+
+
+<script src="/static/ly_plotly-latest.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header" >
+            <a class="navbar-brand" href="#" style="color: #0c87eb">
+                {% block header %}{% endblock %}</a>
+        </div>
+    </div>
+</nav>
+
+{% for item in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        {{ item }}
+    </div>
+{% endfor %}
+
+{% block content %}
+{% endblock %}
+<style type="text/css">
+    .navbar-header{
+   left: 50%;
+   position: relative;
+   transform: translateX(-50%);
+}
+</style>
+<script type="text/javascript">
+    $('.alert').fadeOut(1500);
+</script>
+</body>
+</html>
