@@ -33,7 +33,7 @@ Optional,Existing Building Height,object(),float(),Floors above grade x 10 + 4 (
 Optional,Proposed Building Height,object(),float(),Floors above grade x 10 + 4 (48 inches for roof rails --> overestimation),
 Optional,Gross Floor Area,object(),float(),,
 Optional,Inspection Type,object(),str(),,
-Optional,Inspection Date,object(),datetime(),,
+Optional,Inspection Completion Date,object(),datetime(),,
 Required,Latitude,object(),float(),,
 Required,Longitude,object(),float(),,
 Optional,Building Footprint,object(),geometry(),,
