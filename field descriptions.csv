@@ -1,0 +1,40 @@
+Field Name,Field Category,Field Description/Definition
+Unique Building Identifier,Recommended,Unique Identifying Number that distinctly specifies an existing or proposed Building/Infrastructure
+Unique Land Identifier,Recommended,Unique Identifying Number that distinctly specifies an existing parcel/lot/plot of land
+Building Street Number,Required,Associated Building/Infrastructure Street Address Number portion of a Building/Infrastructure Street Address
+Building Street Name,Required,Associated Building/Infrastructure Street Address Name portion of a Building/Infrastructure Street Address (Includes direction and suffix)
+Building City,Recommended,Associated Building/Infrastructure Street Address City portion of a Building/Infrastructure Street Address
+Building State,Recommended,Associated Building/Infrastructure Street Address State portion of a Building/Infrastructure Street Address
+Building Zip Code,Recommended,Associated Building/Infrastructure Street Address Zip Code portion of a Building/Infrastructure Street Address
+Building Country,Recommended,Associated Building/Infrastructure Street Address Country portion of a Building/Infrastructure Street Address
+Existing Land Use,Recommended,Municipal-specific Land-Use designation(s) (Building/Infrastructure Types permitted on-land)
+Proposed Land Use,Recommended,Municipal-specific Land-Use designation(s) (Building/Infrastructure Types permitted on-land)
+Existing Zoning designation,Recommended,Municipal-specific Zoning designation(s)
+Proposed Zoning designation,Recommended,Municipal-specific Zoning designation(s)
+Permit Number,Required,"Unique Identifying Number that distinctly specifies an in-system, existing infrastructure permit"
+Permit Application Date,Required,The Date for which the associated permit was applied
+Permit Approval Date,Optional,The Date upon which the associated permit was approved
+Permit Issued Date,Recommended,The Date upon which the associated permit was issued
+Permit Expiration Date,Recommended,The Date upon which the associated permit expired/expires
+Certificate of Occupancy Issued Date,Recommended,The Date upon which the associated infrastructure was granted a Certificate of Occupancy
+Permit Type,Required,Municipal-specific Permit Type/Class(s/es)
+Permit Sub-Type,Optional,Municipal-specific Permit Sub-Type/Class(s/es)
+Work Type,Recommended,Associated Work Type/Class(s/es)
+Work Sub-Type,Optional,Additional Work Type/Class(s/es) Specification
+Project Description,Optional,Plain language description of the work to be done
+Permit Current Status,Recommended,Municipal-specific Permit Status designation
+Permit Current Status Date,Optional,The Date upon which the associated permit's status was last updated
+Existing Number of Floors Above Grade,Recommended,Associated Building/Infrastructure's existing number of floors above grade
+Proposed Number of Floors Above Grade,Recommended,Associated Building/Infrastructure's proposed number of floors above grade
+Number of Floors Below Grade,Optional,Associated Building/Infrastructure's existing number of floors below grade
+Existing Building Height,Optional,Associated Building/Infrastructure's existing above grade height. Assumes a floor height of 10 feet and a rooftop railing height of 4 feet.
+Proposed Building Height,Optional,Associated Building/Infrastructure's proposed above grade height. Assumes a floor height of 10 feet and a rooftop railing height of 4 feet.
+Gross Floor Area,Recommended,The total floor area contained within the associated Building/Infrastructure measured to the external face of the external walls.
+Inspection Type,Optional,Municipal-specific Inspection Type/Class(s/es) associated with the permit
+Inspection Completion Date,Recommended,The Date upon which the associated permit's inspections have all been completed. May signify the date upon which the permit itself is completed
+Latitude,Required,The latitude or y-coordinate value of a building's approximate geospatial location. Used for spatially-referential projections
+Longitude,Required,The longitude or x-coordinate value of a building's approximate geospatial location. Used for spatially-referential projections
+Existing Housing Units,Conditional,Associated Building/Infrastructure's total number of existing occupiable housing units
+Proposed Housing Units,Conditional,Associated Building/Infrastructure's total number of proposed occupiable housing units
+Final Existing Land-Use,Generated,"Generated final Existing Land Use Categorization as Residential, Mixed, or Commercial"
+Final Proposed Land-Use,Generated,"Generated final Proposed Land Use Categorization as Residential, Mixed, or Commercial"

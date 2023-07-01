@@ -1,38 +1,40 @@
-Field Category,Global Building DataFeed Specification Field Name,Final Schema Existing Data Type Per Field,Desired Data Type Per Field,Data Type Notes
-Recommended,Unique Building Identifier,object(),string(),Each city should identify at least ONE (1) of these identifying numbers
-Recommended,Unique Land Identifier,object(),string(),Each city should identify at least ONE (1) of these identifying numbers
-Required,Building Street Number,object(),string(),
-Required,Building Street Name,object(),string(),
-Recommended,Building City,object(),string(),
-Recommended,Building State,object(),enumerated(),
-Recommended,Building Zip Code,object(),string(),
-Recommended,Building Country,object(),string(),
-Recommended,Existing Land Use,object(),enumerated(),
-Recommended,Proposed Land Use,object(),enumerated(),
-Recommended,Existing Zoning Designation,object(),enumerated(),
-Recommended,Proposed Zoning Designation,object(),enumerated(),
-Required,Permit Number,object(),str(),
-Required,Permit Application Date,datetime64[ns](),datetime64[ns](),
-Optional,Permit Approval Date,datetime64[ns](),datetime64[ns](),
-Recommended,Permit Issued Date,datetime64[ns](),datetime64[ns](),
-Recommended,Permit Expiration Date,object(),datetime64[ns](),
-Recommended,Certificate of Occupancy Issued Date,object(),datetime64[ns](),
-Required,Permit Type,object(),str(),
-Optional,Permit Sub-Type,object(),str(),
-Recommended,Work Type,object(),str(),
-Optional,Work Sub-Type,object(),str(),
-Optional,Project Description,object(),str(),
-Recommended,Permit Current Status,object(),str(),
-Optional,Permit Current Status Date,object(),datetime64[ns](),
-Recommended,Existing Number of Floors Above Grade,object(),int(),
-Recommended,Proposed Number of Floors Above Grade,object(),int(),
-Optional,Number of Floors Below Grade,object(),int(),
-Optional,Existing Building Height,object(),float(),(Existing Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
-Optional,Proposed Building Height,object(),float(),(Proposed Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
-Recommended,Gross Floor Area,object(),float(),
-Optional,Inspection Type,object(),str(),
-Recommended,Inspection Completion Date,object(),datetime64[ns](),
-Required,Latitude,float64(),float(),
-Required,Longitude,float64(),float(),
-Conditional,Existing Housing Units,object(),int(),
-Conditional,Proposed Housing Units,object(),int(),
+Field Name,Field Category,Existing Data Type Per Field,Desired Data Type Per Field,Recommendation Notes/Desired Data Type Notes
+Unique Building Identifier,Recommended,object(),string(),REC: Each city should identify at least ONE (1) of these identifying numbers (Building or Land/Parcel)
+Unique Land Identifier,Recommended,object(),string(),REC: Each city should identify at least ONE (1) of these identifying numbers (Building or Land/Parcel)
+Building Street Number,Required,object(),string(),DTYPE: Should be a string() data type to capture Street Numbers with both alpha and numeric characters
+Building Street Name,Required,object(),string(),DTYPE: Should be a string() data type to capture Street Names with both alpha and numeric characters
+Building City,Recommended,object(),enumerated()/string(),"DTYPE: This field would be an enumerated list of previously entered string() value, with allowance for new string() value input"
+Building State,Recommended,object(),enumerated(),"DTYPE: An enumerated list of United States state abbreviations, with data-validation"
+Building Zip Code,Recommended,object(),integer()/string(),"DTYPE: 5-digit zip codes will be recorded as integer() values, while 9-digit (ZIP+4) values will be recorded as string() values"
+Building Country,Recommended,object(),DEFAULT string()/enumerated(),U.S.A. (default)
+Existing Land Use,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Proposed Land Use,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Existing Zoning Designation,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Proposed Zoning Designation,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Permit Number,Required,object(),string(),"DTYPE: Permit Numbers may be fully numeric, or alpha-numeric, thus requiring a string()"
+Permit Application Date,Required,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
+Permit Approval Date,Optional,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
+Permit Issued Date,Recommended,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
+Permit Expiration Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
+Certificate of Occupancy Issued Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
+Permit Type,Required,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Permit Sub-Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Work Type,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Work Sub-Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Project Description,Optional,object(),string(),
+Permit Current Status,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Permit Current Status Date,Optional,object(),datetime(),DTYPE: All Date fields should be datetime-based
+Existing Number of Floors Above Grade,Recommended,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
+Proposed Number of Floors Above Grade,Recommended,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
+Number of Floors Below Grade,Optional,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
+Existing Building Height,Optional,object(),float(),DTYPE: CALCULATED FIELD: (Existing Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
+Proposed Building Height,Optional,object(),float(),DTYPE: CALCULATED FIELD: (Proposed Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
+Gross Floor Area,Recommended,object(),integer(),DTYPE: Should be rounded up to the nearest integer() value. Potentially differentiated via an Existing/Proposed column set
+Inspection Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Inspection Completion Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
+Latitude,Required,float64(),float()/double(),
+Longitude,Required,float64(),float()/double(),
+Existing Housing Units,Conditional,object(),integer(),
+Proposed Housing Units,Conditional,object(),integer(),
+Final Existing Land-Use,Generated,object(),enumerated(),DTYPE: CALCULATED FIELD: An enumerated list of pre-defined/definable Land-Use Types for easier categorization
+Final Proposed Land-Use,Generated,object(),enumerated(),DTYPE: CALCULATED FIELD: An enumerated list of pre-defined/definable Land-Use Types for easier categorization
