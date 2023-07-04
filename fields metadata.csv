@@ -3,34 +3,34 @@ Unique Building Identifier,Recommended,object(),string(),REC: Each city should i
 Unique Land Identifier,Recommended,object(),string(),REC: Each city should identify at least ONE (1) of these identifying numbers (Building or Land/Parcel)
 Building Street Number,Required,object(),string(),DTYPE: Should be a string() data type to capture Street Numbers with both alpha and numeric characters
 Building Street Name,Required,object(),string(),DTYPE: Should be a string() data type to capture Street Names with both alpha and numeric characters
-Building City,Recommended,object(),enumerated()/string(),"DTYPE: This field would be an enumerated list of previously entered string() value, with allowance for new string() value input"
-Building State,Recommended,object(),enumerated(),"DTYPE: An enumerated list of United States state abbreviations, with data-validation"
-Building Zip Code,Recommended,object(),integer()/string(),"DTYPE: 5-digit zip codes will be recorded as integer() values, while 9-digit (ZIP+4) values will be recorded as string() values"
+Building City,Recommended,object(),enumerated()/string(),DTYPE: This field would be an enumerated list of previously entered string() value - with allowance for new string() value input
+Building State,Recommended,object(),enumerated(),DTYPE: An enumerated list of United States state abbreviations - with data-validation
+Building Zip Code,Recommended,object(),integer()/string(),DTYPE: 5-digit zip codes will be recorded as integer() values - while 9-digit (ZIP+4) values will be recorded as string() values
 Building Country,Recommended,object(),DEFAULT string()/enumerated(),U.S.A. (default)
-Existing Land Use,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Proposed Land Use,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Existing Zoning Designation,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Proposed Zoning Designation,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Permit Number,Required,object(),string(),"DTYPE: Permit Numbers may be fully numeric, or alpha-numeric, thus requiring a string()"
+Existing Land Use,Recommended,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Proposed Land Use,Recommended,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Existing Zoning Designation,Recommended,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Proposed Zoning Designation,Recommended,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Permit Number,Required,object(),string(),DTYPE: Permit Numbers may be fully numeric - or alpha-numeric - thus requiring a string()
 Permit Application Date,Required,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
 Permit Approval Date,Optional,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
 Permit Issued Date,Recommended,datetime(),datetime(),DTYPE: All Date fields should be datetime-based
 Permit Expiration Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
 Certificate of Occupancy Issued Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
-Permit Type,Required,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Permit Sub-Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Work Type,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
-Work Sub-Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Permit Type,Required,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Permit Sub-Type,Optional,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
+Work Type,Recommended,object(),string(),
+Work Sub-Type,Optional,object(),string(),
 Project Description,Optional,object(),string(),
-Permit Current Status,Recommended,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Permit Current Status,Recommended,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
 Permit Current Status Date,Optional,object(),datetime(),DTYPE: All Date fields should be datetime-based
-Existing Number of Floors Above Grade,Recommended,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
-Proposed Number of Floors Above Grade,Recommended,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
-Number of Floors Below Grade,Optional,object(),integer(),"DTYPE: Values should be converted to integer() values if possible, otherwise they should be left as string() values"
+Existing Number of Floors Above Grade,Recommended,object(),integer(),DTYPE: Values should be converted to integer() values if possible - otherwise they should be left as string() values
+Proposed Number of Floors Above Grade,Recommended,object(),integer(),DTYPE: Values should be converted to integer() values if possible - otherwise they should be left as string() values
+Number of Floors Below Grade,Optional,object(),integer(),DTYPE: Values should be converted to integer() values if possible - otherwise they should be left as string() values
 Existing Building Height,Optional,object(),float(),DTYPE: CALCULATED FIELD: (Existing Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
 Proposed Building Height,Optional,object(),float(),DTYPE: CALCULATED FIELD: (Proposed Number of Floors Above Grade * 10 ft. Floor Height) + 4 ft. Rooftop Railing Height
 Gross Floor Area,Recommended,object(),integer(),DTYPE: Should be rounded up to the nearest integer() value. Potentially differentiated via an Existing/Proposed column set
-Inspection Type,Optional,object(),enumerated(),"DTYPE: An enumerated list of possible values based on the value of the Building City column, with data-validation"
+Inspection Type,Optional,object(),enumerated(),DTYPE: An enumerated list of possible values based on the value of the Building City column - with data-validation
 Inspection Completion Date,Recommended,object(),datetime(),DTYPE: All Date fields should be datetime-based
 Latitude,Required,float64(),float()/double(),
 Longitude,Required,float64(),float()/double(),

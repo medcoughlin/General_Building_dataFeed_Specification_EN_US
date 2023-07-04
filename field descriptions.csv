@@ -11,7 +11,7 @@ Existing Land Use,Recommended,Municipal-specific Land-Use designation(s) (Buildi
 Proposed Land Use,Recommended,Municipal-specific Land-Use designation(s) (Building/Infrastructure Types permitted on-land)
 Existing Zoning designation,Recommended,Municipal-specific Zoning designation(s)
 Proposed Zoning designation,Recommended,Municipal-specific Zoning designation(s)
-Permit Number,Required,"Unique Identifying Number that distinctly specifies an in-system, existing infrastructure permit"
+Permit Number,Required,Unique Identifying Number that distinctly specifies an existing infrastructure permit within the municipality's system
 Permit Application Date,Required,The Date for which the associated permit was applied
 Permit Approval Date,Optional,The Date upon which the associated permit was approved
 Permit Issued Date,Recommended,The Date upon which the associated permit was issued
@@ -36,5 +36,5 @@ Latitude,Required,The latitude or y-coordinate value of a building's approximate
 Longitude,Required,The longitude or x-coordinate value of a building's approximate geospatial location. Used for spatially-referential projections
 Existing Housing Units,Conditional,Associated Building/Infrastructure's total number of existing occupiable housing units
 Proposed Housing Units,Conditional,Associated Building/Infrastructure's total number of proposed occupiable housing units
-Final Existing Land-Use,Generated,"Generated final Existing Land Use Categorization as Residential, Mixed, or Commercial"
-Final Proposed Land-Use,Generated,"Generated final Proposed Land Use Categorization as Residential, Mixed, or Commercial"
+Final Existing Land-Use,Generated,Generated final Existing Land Use Categorization as Residential/Mixed/Commercial
+Final Proposed Land-Use,Generated,Generated final Proposed Land Use Categorization as Residential/Mixed/Commercial
